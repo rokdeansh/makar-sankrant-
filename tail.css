@@ -1,0 +1,71 @@
+body{
+    margin:0;
+    height: 100vh;
+    background: linear-gradient(rgb(128, 0, 102),rgb(72, 0, 255));
+    text-align: center;
+    margin-top: 70px;
+    
+}
+
+.heading{
+  
+    font-size: 40px;
+   color : white;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.kite-container{
+position: absolute;
+top:300px;
+left:-150px;
+animation: fly 8s linear infinite;
+}
+
+.kite{
+height:120px;
+width:120px;
+background: linear-gradient( yellow,orange);
+transform: rotate(45deg);
+border-radius: 6px;
+}
+
+.tail{
+position: absolute;
+
+top:140px;
+left:55px;
+display: flex; 
+ flex-direction: column;
+gap: 12px;
+}
+
+.tail span{
+height : 20px ;
+width: 20px;
+animation: tailMove 1s infinite alternate;
+background: linear-gradient( rgb(255, 115, 0),yellow);
+transform: rotate(45deg);
+}
+
+@keyframes fly{
+0%{
+transform: translateX(-150px) translateY(0);
+}
+50%{
+transform: translateX(600px) translateY(-120px);
+
+}
+100%{
+transform: translateX(1200px) translateY(0);
+
+}
+}
+
+@keyframes tailMove {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(65deg);
+    }
+}
